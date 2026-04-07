@@ -1,0 +1,373 @@
+
+:root {
+  --morado-principal: #4a148c;
+  --rosa-neon: #ff00bd;
+  --rosa-claro: #fce4ec;
+  --blanco: #ffffff;
+  --gris-oscuro: #1a1a1a;
+  --fuente-titulos: "Lexend", sans-serif;
+  --fuente-texto: "Roboto Condensed", sans-serif;
+}
+
+/* 2. RESET Y BASES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  line-height: 1.7;
+  color: #333;
+  background-color: var(--blanco);
+}
+
+/* 3. TIPOGRAFÍA EXAGERADA */
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+/* 4. HEADER CON FLEXBOX (Letras blancas resaltadas) */
+.header {
+  background-color: var(--morado-principal);
+  border-bottom: 5px solid var(--rosa-neon);
+  padding: 2rem 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header__name { 
+  color: var(--blanco); 
+  font-size: 2.5rem;
+}
+
+.header__tagline { 
+  color: #f48fb1; 
+  font-weight: bold; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--blanco); 
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav__link:hover {
+  background-color: var(--blanco);
+  color: var(--morado-principal);
+  transform: translateY(-3px);
+}
+
+.nav__link--active {
+  background-color: var(--rosa-neon);
+  color: var(--blanco);
+}
+
+/* 5. HERO SECTION (Flexbox + Degradado) */
+.hero {
+  padding: 100px 5%;
+  background: linear-gradient(135deg, var(--morado-principal) 0%, var(--rosa-neon) 100%);
+  color: var(--blanco);
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.stat__number {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--blanco);
+}
+
+/* 6. BOTONES CON EFECTO RELLENO */
+.button {
+  display: inline-block;
+  padding: 15px 35px;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background-color: transparent;
+  color: var(--blanco);
+  border: 3px solid var(--blanco);
+}
+
+.button--primary:hover {
+  background-color: var(--blanco);
+  color: var(--rosa-neon);
+  transform: scale(1.1);
+}
+
+.button--secondary {
+  background-color: var(--morado-principal);
+  color: var(--blanco);
+  border: 3px solid var(--morado-principal);
+}
+
+.button--secondary:hover {
+  background-color: var(--blanco);
+  color: var(--morado-principal);
+}
+
+/* 7. SECCIÓN SOBRE MÍ CON GRID */
+.about__container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.about__title {
+  color: var(--morado-principal);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.quote {
+  background-color: var(--rosa-claro);
+  padding: 40px;
+  border-left: 10px solid var(--rosa-neon);
+  border-right: 2px solid var(--rosa-neon);
+  border-radius: 20px;
+  margin: 30px 0;
+}
+
+.quote__text {
+  font-family: var(--fuente-titulos);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--morado-principal);
+}
+
+.values__list {
+  display: grid;
+  gap: 20px;
+}
+
+.values__item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rosa-claro);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid var(--rosa-neon);
+}
+
+.values__item strong { color: var(--morado-principal); font-size: 1.1rem; }
+.values__item small { color: #666; }
+
+/* 8. PROYECTOS Y EXPERIENCIA CON GRID */
+.projects__container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  background: var(--blanco);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.project--featured {
+  border: 3px solid var(--rosa-neon);
+}
+
+.project__badge {
+  background-color: var(--rosa-neon);
+  color: var(--blanco);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.project__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  background: var(--rosa-claro);
+  color: var(--morado-principal);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* 9. FORMACIÓN (Skill Cards) */
+.skills__container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.skills__list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill__card {
+  background: var(--morado-principal);
+  color: var(--blanco);
+  padding: 30px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.skill__card:hover { transform: translateY(-10px); }
+
+.skill__card h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--rosa-neon);
+  padding-bottom: 10px;
+}
+
+.skill__card ul {
+  list-style: "⚜️ ";
+  padding-left: 20px;
+}
+
+.skill__card li { margin-bottom: 10px; }
+
+/* 10. FOOTER */
+.footer {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 50px 0;
+  text-align: center;
+  border-top: 5px solid var(--morado-principal);
+}
+/* =============================================
+   FASE 5: RESPONSIVE DESIGN (MEDIA QUERIES)
+   ============================================= */
+
+/* 1. DISEÑO FLUIDO: Ajuste de contenedores */
+.header__container, .hero__container, .about__container, 
+.projects__container, .skills__container {
+    width: 90%; /* Fluidez para que no toque los bordes en tablets */
+    max-width: 1200px;
+}
+
+/* 2. MEDIA QUERY PARA TABLETS Y CELULARES (Máximo 768px) */
+@media (max-width: 768px) {
+    
+    /* Header: De horizontal a vertical */
+    .header__container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav__list {
+        flex-wrap: wrap; /* Para que los botones no se salgan de la pantalla */
+        justify-content: center;
+    }
+
+    /* Hero: Letras más pequeñas para que quepan */
+    h1 { font-size: 2.5rem; }
+    .hero__title { font-size: 2.2rem; }
+    
+    .hero__stats {
+        flex-direction: column; /* Stats una debajo de otra */
+        gap: 30px;
+    }
+
+    /* Grid de Sobre Mí: De 2 columnas a 1 sola */
+    .about__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .quote {
+        border-right: 10px solid var(--rosa-neon); /* Caja simétrica en móvil */
+    }
+
+    /* Proyectos y Habilidades: Una sola columna fluida */
+    .projects__grid, .skills__list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        width: 100%; /* Botones grandes fáciles de picar con el dedo */
+        margin: 10px 0;
+    }
+}
+
+/* 3. AJUSTE PARA CELULARES MUY PEQUEÑOS (480px) */
+@media (max-width: 480px) {
+    .header__name { font-size: 1.8rem; }
+    .stat__number { font-size: 2.5rem; }
+}

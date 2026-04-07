@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Susana Jazmin - Portfolio Profesional</title>
+  <meta name="description"
+    content="Portfolio personal de Susana Jazmin Villegas. Ingeniera en Sistemas, Scout y amante de la repostería." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__brand">
+        <h1 class="header__name">Susana Jazmin</h1>
+        <p class="header__tagline">Ingeniería en Sistemas | Scout | Repostería</p>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#inicio" class="nav__link nav__link--active">Inicio</a></li>
+          <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li class="nav__item"><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    
+    <section class="hero" id="inicio">
+      <div class="hero__container">
+        <h2 class="hero__title">¡Hola! Soy Susy</h2>
+        <p class="hero__subtitle">Sistemas, Dulces y Huellitas</p>
+        <p class="hero__description">
+          Disciplina scout para la vida, lógica de sistemas para el futuro y 
+          el toque dulce de la repostería para el alma. Construyendo código 
+          con pasión desde Puerto Vallarta.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#proyectos" class="button button--primary">Ver mis Proyectos</a>
+          <a href="#contacto" class="button button--secondary">Contáctame</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__number">11+</span>
+            <span class="stat__label">Años Scout ⚜️</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">2</span>
+            <span class="stat__label">Gatos (Gordito & Kike) 🐈</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">1</span>
+            <span class="stat__label">Sobrino (Javivi)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre-mi">
+      <div class="about__container">
+        <h2 class="about__title">Mi Viaje Personal</h2>
+
+        <p class="about__intro">
+          Soy una ingeniera en formación que encuentra la misma satisfacción en un 
+          algoritmo optimizado que en un pastel perfectamente horneado.
+        </p>
+
+        <p class="about__text">
+          Estudio en el Tec Vallarta y cada día busco superar mis propios límites. 
+          Mi motor son mis raíces y mi familia; siempre llevo conmigo el recuerdo 
+          de mis gatos <strong>Gordito y Kike</strong>, y la energía de mi sobrino 
+          <strong>Javivi</strong>. Como Scout, mi brújula apunta siempre al servicio.
+        </p>
+
+        <blockquote class="quote">
+          <p class="quote__text">
+            "Dejar el mundo en mejores condiciones de como lo encontramos."
+          </p>
+          <cite class="quote__author">— Baden-Powell (Mi lema Scout)</cite>
+        </blockquote>
+
+        <div class="values">
+          <h3 class="values__title">Mis Valores</h3>
+          <ul class="values__list">
+            <li class="values__item">
+              <span class="values__icon">🎯</span>
+              <strong>Dedicación:</strong> Comprometida con mi aprendizaje diario.
+            </li>
+            <li class="values__item">
+              <span class="values__icon">🍰</span>
+              <strong>Creatividad:</strong> Buscando soluciones dulces e innovadoras.
+            </li>
+            <li class="values__item">
+              <span class="values__icon">⚜️</span>
+              <strong>Hermandad:</strong> Aprendiendo y compartiendo con mi comunidad.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="proyectos">
+      <div class="projects__container">
+        <h2 class="projects__title">Prácticas de Ingeniería</h2>
+        <div class="projects__grid">
+          <article class="project">
+            <h3 class="project__title">Mi Portafolio Web</h3>
+            <p class="project__description">
+              Desarrollado durante el curso de HTML y CSS, aplicando conceptos 
+              de diseño, tipografía y Box Model.
+            </p>
+            <div class="project__technologies">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">BEM</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__copyright">
+        © 2026 Susana Jazmin - Portfolio de Sistemas
+      </p>
+      <p class="footer__credits">
+        Diseñado con ❤️ en honor a Gordito, Kike y Javivi
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

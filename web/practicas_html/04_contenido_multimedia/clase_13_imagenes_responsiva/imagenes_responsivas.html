@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes responsive</title>
+</head>
+<body>
+    <img src="IMG/cp_ayc_compromisos.png" 
+    alt="CAPTURA DE PANTALLA DE AYC" 
+    srcset="
+    IMG/cp_ayc_compromisos.png 1000w,
+    IMG/SolIT.png 800w,
+    IMG/Caprichitos_PV_logo.jpg 400w
+    "
+    sizes="(max-width: 600px) 100vw, 50vw">
+
+    <picture>
+        <source media="(minwidth: 768px)" 
+        srcset="Caprichitos_PV_logo.jpg">
+        <source media="(minwidth: 480px)" srcset="SolIT.png">
+        <img src="IMG/cp_ayc_compromisos.png" alt="CAPTURA DE PANTALLA DE AYC">
+    </picture>
+
+    <img src="IMG/SolIT.png" 
+    alt="CAPTURA DE solicitud de insignia terminal" 
+    srcset="IMG/cp_ayc_compromisos.png 300w, IMG/SolIT.png 600w"
+    sizes="(max-width: 600px) 100vw, 600px"
+    loading="lazy"
+    decoding="async"
+    width="600"
+    height="400">
+
+
+</body>
+</html>

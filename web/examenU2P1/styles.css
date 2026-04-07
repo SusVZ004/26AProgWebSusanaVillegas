@@ -1,0 +1,81 @@
+:root {
+    --color-borde: #000000;
+    --color-fondo-body: #ffffff;
+    --color-verde-header: #00ff00;
+    --color-azul-header: #a4c2f4;
+    --color-amarillo-fuerte: #ffff00;
+    --color-mostaza-claro: #e2953d;
+    --ancho-maximo-contenedor: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--color-fondo-body);
+    padding: 40px 20px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: var(--ancho-maximo-contenedor);
+    margin: 0 auto;
+}
+
+.titulo-documento {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--color-borde);
+}
+
+.tabla-congruencial {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 2px solid var(--color-borde);
+}
+
+.columna-izquierda { width: calc(50% - 15px); }
+.columna-central { width: 55px; }
+.columna-derecha { width: calc(50% - 15px); }
+
+.tabla-congruencial th,
+.tabla-congruencial td {
+    border: 1px solid var(--color-borde);
+    padding: 10px;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.tabla-congruencial th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabla-congruencial td {
+    height: 40px;
+}
+
+.fondo-verde { background-color: var(--color-verde-header); }
+.fondo-azul { background-color: var(--color-azul-header); }
+.fondo-amarillo { background-color: var(--color-amarillo-fuerte); }
+.fondo-mostaza { background-color: var(--color-mostaza-claro); }
+.fondo-blanco { background-color: var(--color-fondo-body); }
+
+.texto-centrado-negrita {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.texto-justificado-interno {
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 20px;
+}

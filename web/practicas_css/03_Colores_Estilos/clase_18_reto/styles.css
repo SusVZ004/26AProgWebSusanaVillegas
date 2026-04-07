@@ -1,0 +1,224 @@
+/* =============================================
+   FASE 4: LAYOUT MODERNO + EXPLOSIÓN DE COLOR
+   ============================================= */
+
+:root {
+  --morado-principal: #4a148c;
+  --rosa-neon: #ff00bd;
+  --rosa-claro: #fce4ec;
+  --blanco: #ffffff;
+  --gris-oscuro: #362d2d;
+  --fuente-titulos: "Lexend", sans-serif;
+  --fuente-texto: "Roboto Condensed", sans-serif;
+}
+
+/* 1. RESET Y BASES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  line-height: 1.7;
+  color: #ffffff;
+  background-color: var(--blanco);
+}
+
+/* 2. TIPOGRAFÍA EXAGERADA */
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+/* 3. HEADER CON FLEXBOX (Letras blancas resaltadas) */
+.header {
+  background-color: var(--morado-principal);
+  border-bottom: 5px solid var(--rosa-neon);
+  padding: 2rem 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header__name { 
+  color: var(--blanco); /* Blanco para que resalte mucho */
+  font-size: 2.5rem;
+}
+
+.header__tagline { 
+  color: #f48fb1; 
+  font-weight: bold; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--blanco); /* Letras blancas en el menú también */
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav__link:hover {
+  background-color: var(--blanco);
+  color: var(--morado-principal);
+  transform: translateY(-3px);
+}
+
+.nav__link--active {
+  background-color: var(--rosa-neon);
+  color: var(--blanco);
+}
+
+/* 4. HERO SECTION (Flexbox + Degradado Fase 3) */
+.hero {
+  padding: 100px 5%;
+  background: linear-gradient(135deg, var(--morado-principal) 0%, var(--rosa-neon) 100%);
+  color: var(--blanco);
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.stat__number {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--blanco);
+}
+
+/* 5. BOTONES CON EFECTO RELLENO */
+.button {
+  display: inline-block;
+  padding: 15px 35px;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background-color: transparent;
+  color: var(--blanco);
+  border: 3px solid var(--blanco);
+}
+
+.button--primary:hover {
+  background-color: var(--blanco);
+  color: var(--rosa-neon);
+  transform: scale(1.1);
+}
+
+.button--secondary {
+  background-color: var(--morado-principal);
+  color: var(--blanco);
+  border: 3px solid var(--morado-principal);
+}
+
+.button--secondary:hover {
+  background-color: var(--blanco);
+  color: var(--morado-principal);
+}
+
+/* 6. SOBRE MÍ CON GRID (Diseño Fase 4) */
+.about__container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.about__title {
+  color: var(--morado-principal);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Texto a la izquierda, valores a la derecha */
+  gap: 50px;
+  align-items: center;
+}
+
+/* 7. CITA Y VALORES (Estilo Fase 3) */
+.quote {
+  background-color: var(--rosa-claro);
+  padding: 40px;
+  border-left: 10px solid var(--rosa-neon);
+  border-right: 2px solid var(--rosa-neon);
+  border-radius: 20px;
+}
+
+.quote__text {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--morado-principal);
+}
+
+.values__list {
+  display: grid;
+  gap: 20px;
+}
+
+.values__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--rosa-claro);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid var(--rosa-neon);
+  font-weight: bold;
+}
+
+/* 8. FOOTER */
+.footer {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 50px 0;
+  text-align: center;
+  border-top: 5px solid var(--morado-principal);
+}

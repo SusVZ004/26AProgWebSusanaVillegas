@@ -1,0 +1,40 @@
+p {
+  margin-bottom: 30px;
+}
+
+.rojo {
+  color: red;
+}
+
+.contenedor {
+  border: 2px solid blue;
+  color: blue;
+}
+
+.contenedor p {
+  color: orange;
+}
+
+#unico {
+  background-color: yellow;
+}
+
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: yellow !important;
+}
+
+
+/*Elemento (h1, p, div): 0,0,0,1
+Clase (.rojo, .grande): 0,0,1,0
+ID (#unico): 0,1,0,0
+Inline style="...": 1,0,0,0
+!important: Gana siempre (¡úsalo con cuidado!)*/
