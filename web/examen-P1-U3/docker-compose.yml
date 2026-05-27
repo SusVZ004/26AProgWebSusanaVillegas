@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # --- SERVICIO 1: BASE DE DATOS (PostgreSQL) ---
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: scout_postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: admin_scout
+      POSTGRES_PASSWORD: password_seguro_123
+      POSTGRES_DB: mundo_mejor_sistema
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+
+  # --- SERVICIO 2: MICROSERVICIO DE PROYECTOS (Puerto 3001) ---
+  microservicio_proyectos:
+    build:
+      context: ./backend/microservicio-proyectos
+      dockerfile: Dockerfile
+    container_name: microservicio_proyectos_container
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - DB_HOST=postgres_db
+      - DB_USER=admin_scout
+      - DB_PASSWORD=password_seguro_123
+      - DB_DATABASE=mundo_mejor_sistema
+      - DB_PORT=5432
+    depends_on:
+      - postgres_db
+
+  # --- SERVICIO 3: MICROSERVICIO DE USUARIOS (Puerto 3002) ---
+  microservicio_usuarios:
+    build:
+      context: ./backend/microservicio-usuarios
+      dockerfile: Dockerfile
+    container_name: microservicio_usuarios_container
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - DB_HOST=postgres_db
+      - DB_USER=admin_scout
+      - DB_PASSWORD=password_seguro_123
+      - DB_DATABASE=mundo_mejor_sistema
+      - DB_PORT=5432
+    depends_on:
+      - postgres_db
+# --- SERVICIO 4: MICROSERVICIO DE SOLICITUDES (Puerto 3003) ---
+  microservicio_solicitudes:
+    build:
+      context: ./backend/microservicio-solicitudes
+      dockerfile: Dockerfile
+    container_name: microservicio_solicitudes_container
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+      - DB_HOST=postgres_db
+      - DB_USER=admin_scout
+      - DB_PASSWORD=password_seguro_123
+      - DB_DATABASE=mundo_mejor_sistema
+      - DB_PORT=5432
+    depends_on:
+      - postgres_db
+      
+volumes:
+  postgres_data:
