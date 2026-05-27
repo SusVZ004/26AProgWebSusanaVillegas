@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.translate-x:hover {
+  transform: translateX(30px);
+}
+
+.translate-y:hover {
+  transform: translateY(-30px);
+}
+
+.translate-xy:hover {
+  transform: translate(20px, 20px);
+}
+
+.rotate-45:hover {
+  transform: rotate(180deg);
+}
+
+.scale-small:hover {
+  transform: scale(2);
+}

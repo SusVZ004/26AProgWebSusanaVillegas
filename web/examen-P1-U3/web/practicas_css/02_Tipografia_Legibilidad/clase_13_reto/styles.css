@@ -1,0 +1,115 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* MEJORADO: Usando fuentes modernas de Google */
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1.7; /* Mayor espacio para que no canse la vista */
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* TIPOGRAFÍA GENERAL - Usando unidades REM */
+h1, h2, h3 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1.5rem; }
+h2 { font-size: 2.25rem; margin-top: 3rem; margin-bottom: 1.25rem; }
+
+p { margin-bottom: 1.25rem; }
+
+/* HEADER */
+.header {
+ 
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header__name { 
+  font-family: "Lexend", sans-serif;
+  font-weight: 900;
+  color: #1a1a1a; 
+}
+
+.header__tagline {
+  color: #d1b3c5;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #e0d5dec2;
+  margin-bottom: 3rem;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: #d643b1; 
+}
+
+.stat__number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #610459;
+}
+
+/* BOTONES */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: "Lexend", sans-serif;
+}
+
+.button--primary {
+  background-color: #914d7c;
+  color: white;
+}
+
+/* CITA - Usando fuente de sistema pero con mejor estilo */
+.quote {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-left: 4px solid #e90ec4;
+  text-align: center;
+}
+
+.quote__text {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio - Susana Villegas</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
+        .contenedor { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 700px; margin: auto; }
+        h1 { color: #333; border-bottom: 2px solid #333; }
+        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 10px; margin-top: 30px; }
+        .datos { font-weight: bold; color: #555; }
+        
+        /* Estilos para los botones de navegación rápida */
+        .nav-practicas { display: flex; gap: 10px; margin: 20px 0; justify-content: center; }
+        .btn-nav { padding: 10px 20px; text-decoration: none; color: white; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
+        .btn-html { background-color: #e67e22; } /* Naranja para HTML */
+        .btn-css { background-color: #2980b9; }  /* Azul para CSS */
+        .btn-examen { background-color: #9b59b6; } /* Morado para el examen */
+        
+        .btn-proyecto { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 12px 25px; 
+            background-color: #27ae60; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+        
+        ul { list-style-type: none; padding-left: 10px; }
+        li { margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+        a { color: #34495e; text-decoration: none; }
+        a:hover { color: #3498db; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Currículum Vitae</h1>
+        <p><span class="datos">Nombre:</span> Susana Villegas</p>
+        <p><span class="datos">Carrera:</span> Ingeniería en Sistemas Computacionales</p>
+        <hr>
+        
+        <h3>Formación Académica</h3>
+        <ul>
+            <li>Preparatoria: Preparatoria General por Competencias</li>
+            <li>Universidad: Tecnológico Superior de Jalisco</li>
+        </ul>
+
+        <h3>Experiencia / Proyectos</h3>
+        <ul>
+            <li>Control de inventarios y dispensadores de agua/limpieza.</li>
+            <li>Scout desde hace 11 años.</li> 
+        </ul>
+
+        <div class="nav-practicas">
+            <a href="#html" class="btn-nav btn-html">📂 Ver Prácticas HTML</a>
+            <a href="#css" class="btn-nav btn-css">🎨 Ver Prácticas CSS</a>
+            <a href="examenU2P1/index.html" class="btn-nav btn-examen">📝 EXAMEN UNIDAD 2</a>
+        </div>
+
+        <h2 id="html">Curso de Fundamentos de HTML</h2>
+        <ul>
+            <li><a href="practicas_html/01_FUNDAMENTOS_HTML/Clase_01_fundamento_estructura_basica/Document.html">Práctica 1: Documento</a></li>
+            <li><a href="practicas_html/01_FUNDAMENTOS_HTML/clase_02_texto_jerarquia_contenido/Practica texto.html">Práctica 2: Jerarquía de contenido</a></li>
+            <li><a href="practicas_html/01_FUNDAMENTOS_HTML/clase_03_imagenes/imagenes.html">Práctica 3: Imágenes</a></li>
+            <li><a href="practicas_html/02_Listas_enlaces/clase_06_listas/Listas y enlaces.html">Práctica 4: Listas</a></li>
+            <li><a href="practicas_html/02_Listas_enlaces/clase_07_estructura_semantica/Estructura semantica.html">Práctica 5: Estructura semántica</a></li>
+            <li><a href="practicas_html/03_Formularios/clase_08_Formularios/Formularios.html">Práctica 6: Formularios</a></li>
+            <li><a href="practicas_html/03_Formularios/clase_09_tipo_inputs/mas inputs.html">Práctica 7: Más inputs</a></li>
+            <li><a href="practicas_html/03_Formularios/clase_10_Validaciones/validacion.html">Práctica 8: Validaciones</a></li>
+            <li><a href="practicas_html/03_Formularios/clase_12_tablas/tablas.html">Práctica 9: Tablas</a></li>
+            <li><a href="practicas_html/04_contenido_multimedia/clase_13_imagenes_responsiva/imagenes_responsivas.html">Práctica 10: Imágenes responsivas</a></li>
+            <li><a href="practicas_html/04_contenido_multimedia/clase_14_videos_audio/video_audio.html">Práctica 11: Videos y Audio</a></li>
+            <li><a href="practicas_html/05_Accesibilidad/clase_15_accesibilidad/accesibilidad.html">Práctica 12: Accesibilidad</a></li>
+            <li><a href="practicas_html/05_Accesibilidad/clase_16_SEO/SEO.HTML">Práctica 13: SEO</a></li>
+        </ul>
+
+        <h2 id="css">Curso de CSS</h2>
+        <ul>
+            <li><a href="practicas_css/01_fundamentos/clase_01_css/index.html">Clase 1 - Introducción a CSS</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_02_sintaxis_selectores/indice.html">Selectores CSS</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_04_pseudo_clases_elementos/index.html">Pseudo-clases y Pseudo-elementos</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_05_box_model/index.html">Box Model CSS</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_06_position_css/index.html">Práctica: Position CSS</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_07_organizacion_bem/index.html">Práctica: BEM</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_8_unidades_modernas/index.html">Práctica: Unidades CSS</a></li>
+            <li><a href="practicas_css/01_fundamentos/clase_9_reto_fundamentos/index.html">Susana Jazmin - Portafolio Profesional fase 1</a></li>
+            <li><a href="practicas_css/02_Tipografia_Legibilidad/clase_10_fuentes_web/index.html">Práctica: Fuentes Web</a></li>
+            <li><a href="practicas_css/02_Tipografia_Legibilidad/clase_11_propiedades_tipograficas/index.html">Propiedades Tipográficas</a></li>
+            <li><a href="practicas_css/02_Tipografia_Legibilidad/clase_12_control_texto/index.html">Control de Texto</a></li>
+            <li><a href="practicas_css/02_Tipografia_Legibilidad/clase_13_reto/index.html">Susana Jazmin - Portfolio Profesional (Fase 2)</a></li>
+            <li><a href="practicas_css/03_Colores_Estilos/clase_14_sistemas_color/index.html">Sistemas de Color</a></li>
+            <li><a href="practicas_css/03_Colores_Estilos/clase_15_variables_css/index.html">Variables CSS</a></li>
+            <li><a href="practicas_css/03_Colores_Estilos/clase_16_degradados/index.html">Degradados CSS</a></li>
+            <li><a href="practicas_css/03_Colores_Estilos/clase_17_sombras_bordes/index.html">Sombras y Bordes</a></li>   
+            <li><a href="practicas_css/03_Colores_Estilos/clase_18_reto/index.html">Susana Jazmin - Portfolio Profesional(Fase 3)</a></li>
+            <li><a href="practicas_css/04_Layout_Moderno/clase_19_introduccion_flexbox/index.html">Flexbox Básico</a></li>
+            <li><a href="practicas_css/04_Layout_Moderno/clase_20_flexbox_avanzado/index.html">Flexbox Avanzado</a></li>
+            <li><a href="practicas_css/04_Layout_Moderno/clase_21_grid_basico/index.html">Grid Básico</a></li>
+            <li><a href="practicas_css/04_Layout_Moderno/clase_22_grid_avanzado/index.html">Grid Avanzado</a></li>
+            <li><a href="practicas_css/04_Layout_Moderno/clase_23_reto_layout/index.html"> Susana Jazmin | Ingeniera & Scout (fase 4)</a></li>
+            <li><a href="practicas_css/05_Responsive_Design/clase_24_media_queries/index.html"> CSS Media Queries</a></li>
+            <li><a href="practicas_css/05_Responsive_Design/clase_25_diseno_fluido/index.html"> CSS Diseño Fluido</a></li>
+            <li><a href="practicas_css/05_Responsive_Design/clase_27_reto_responsive/index.html"> Susana Jazmin | Ingeniera & Scout (fase 5)</a></li>
+            <li><a href="practicas_css/06_Efectos_Animaciones/clase_28_transformaciones/index.html"> Transformaciones CSS</a></li>
+            <li><a href="practicas_css/06_Efectos_Animaciones/clase_29_transiciones/index.html"> Transiciones CSS</a></li>
+            <li><a href="practicas_css/06_Efectos_Animaciones/clase_30_transiciones_ejemplo/index.html"> transiciones ejemplo CSS</a></li>
+            <li><a href="practicas_css/06_Efectos_Animaciones/clase_31_animaciones/index.html"> Animaciones CSS</a></li>
+            
+        </ul>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="proyecto_final_html/proyecto_final.html" class="btn-proyecto">🏁 Ir al Proyecto Final HTML</a>
+            <a href="proyecto_final_css/index.html" class="btn-proyecto">🏁 Ir al Proyecto Final css</a>
+        </div>
+    </div>
+</body>
+</html>
